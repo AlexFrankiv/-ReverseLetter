@@ -1,7 +1,9 @@
-package main;
-
 public class Main {
-    public static String reverse(String s) {
+    public static String reverseLetter(String s) {
+        if (s == null) {
+            return s;
+        }
+
         char[] chars = s.toCharArray();
         int left = 0;
         int right = chars.length - 1;
@@ -22,11 +24,4 @@ public class Main {
         return new String(chars);
     }
 
-    public static void main(String[] args) {
-        String s = "J@va the be$t!123";
-        System.out.println(reverse(s));
-
-        String s1 = "java";
-        System.out.println(reverse(s1));
-    }
 }
